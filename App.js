@@ -18,8 +18,6 @@ const Rendring = (req,res) =>{
     }
     else if(MyURL.pathname.includes('Api'))
     {        // we can access HTTP headers
-
-
         GetUsers(req, res)
     }
     else{
