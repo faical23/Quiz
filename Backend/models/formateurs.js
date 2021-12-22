@@ -14,7 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   formateurs.init({
-    Fullname: DataTypes.STRING
+    Fullname: DataTypes.STRING,
+    UserId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'formateurs',
