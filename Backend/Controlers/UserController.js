@@ -7,7 +7,7 @@ const CreateToken = (Id)=>{
         { userId: Id},
         "FAICALBAHSIS",
         {
-          expiresIn: "2h",
+          expiresIn: 86400,
         }
       );
       return token;
@@ -21,28 +21,28 @@ module.exports={
             const NewFormateur =  await DB.formateurs.create({ Fullname: req.body.Fullname, UserId:user.id})
             .then((Formateurs) =>{
                 const token = CreateToken(Formateurs.id) 
-                // user.token = token
                 res.status(201).send({"Token":token})
             }).catch((err) => {
                 res.status(400).send({error:err});
             });
 
         })
-          .catch((err) => {
-                res.status(400).send({error:err});
-            });
+        .catch((err) => {
+            res.status(400).send({error:err});
+        });
     },
     SignIn : async (req, res) => {
-        if(req.body.Email === '' || req.body.Password === ''){
+        if(req.body.Email === '' || req.body.Password == ''){
             res.status(400).send({error:"Invalide data"});
         }
         else{
-            let User = await DB.users.findOne({ where: { Email: req.body.Email, Password:req.body.Password } });
+            let CryptPass =  CryptPassword(req.body.Password)
+            let User = await DB.users.findOne({ where: { Email: req.body.Email, Password:CryptPass} });
             if (User === null) {
                 res.status(404).send({Message:"Not found"});
             } else {
                 const Role = User.Role
-                if(User.Role === 0){
+                if(Role === 1){
                     const Formateur = await DB.formateurs.findOne({where :{UserId:User.id}})
                     .then((Formateur) => {
                         const Token = CreateToken(Formateur.id)
@@ -51,7 +51,7 @@ module.exports={
                         res.status(404).send({Message : "Bad request"})
                     })
                 }
-                else{
+                else if(Role === 2){
                     const Student = await DB.student.findOne({where :{UserId:User.id}})
                     .then((Student) => {
                         const Token = CreateToken(Student.id)
@@ -64,5 +64,8 @@ module.exports={
             }
         }
         
+    },
+    SignOut: async (req, res) => {
+        res.status(200).send({Message:"Logout"});
     }
 }

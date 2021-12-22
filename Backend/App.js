@@ -5,10 +5,14 @@ app.use(express.json())
 
 /// IMPORT OUR ROUTER 
 const UserRouter = require('./Router/User')
+const FormateurRouter = require('./Router/Formateurs')
+const StudentRouter = require('./Router/Student')
 
 
 /// OUR ROUTERS 
 app.use('/api/user', UserRouter)
+app.use('/api/formateur', FormateurRouter)
+app.use('/api/student', StudentRouter)
 
 
 app.get('/', (req, res) => {

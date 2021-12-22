@@ -8,7 +8,6 @@ const CryptPassword = (Password) =>{
 
     return hash
 }
-// const DecryptPassword = ()
 
 module.exports = {CryptPassword}
 
