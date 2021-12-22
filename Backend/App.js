@@ -1,28 +1,21 @@
 const express = require('express')
 const app = express()
-const router = require('./Router')
+const router = require('./Router/User')
 app.use(express.json())
 
+/// IMPORT OUR ROUTER 
+const UserRouter = require('./Router/User')
 
 
-/// create table  and connexion
-const Sequlize = require('sequelize');
-// const DB = new Sequlize('myschool', 'root', '', {host:'localhost',dialect:'mysql'});
-// DB.authenticate().then(() => {console.log('connected to DB');});
-// const User = DB.define('Users', { 
-//     id:{
-//         type:Sequelize.INTEGER,
-//         autoIncrement:true,
-//         allowNull:false,
-//         primaryKey:true
-//     },
-//     Email: { type: Sequelize.STRING, allowNull:false },
-//     Password: { type: Sequelize.STRING, allowNull:false },
-//     Role: { type: Sequelize.INTEGER, allowNull:false },
-//     createdAt: Sequelize.DATE,
-//     updatedAt: Sequelize.DATE,
-// })
+/// OUR ROUTERS 
+app.use('/api/user', UserRouter)
 
+
+app.get('/', (req, res) => {
+    res.send({
+        message:"welcome in my api!"
+    })
+})
 const listener = app.listen(process.env.PORT || 8080, () => {
     console.log('Your app is listening on port ' + listener.address().port)
 })
