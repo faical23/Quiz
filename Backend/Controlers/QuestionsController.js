@@ -29,50 +29,33 @@ module.exports={
     },
     Add: (req, res) => {
         DB.Questioners.create({ QuestionName: req.body.QuestionName, Point: req.body.Point, SubjectId: req.body.SubjectId,})  
-        .then(  (Question) =>{
-            let AllRes = req.body.Reponses
-            console.log(AllRes)
-            // AllRes.foreach(Res =>{
-            //     console.log.log("response",res)
-            // })
-            DB.AllReponse.bulkCreate(
-                [{"reponse": "AAAA","status": true,"QuestionId": 1 },
-                { "reponse": "BBBB","status": false,"QuestionId": 1  }
-             ]).then( ()=>{
+        .then( async (Question) =>{
+            let newRes = req.body.Reponses
+            newRes.forEach(res =>{res.QuestionId = Question.id})
+            DB.AllReponse.bulkCreate(newRes).then(()=>{
                 res.status(201).send({response:'seuccees added'});
              }).catch((err) => {
-                res.status(400).send({error:"err"});
+                res.status(400).send({error:err});
             });
-
-
-
         })
         .catch((err) => {
-            res.status(400).send({error:"err"});
+            res.status(400).send({error:err});
         });
     },
-    Update: async (req, res) => {
-        let users = await DB.users.update({ Email : req.body.Email }, {
+    Update: (req, res) => {
+        DB.Questioners.update({ QuestionName : req.body.QuestionName,Point:req.body.Point,SubjectId:req.body.SubjectId }, {
             where: {
                 id: req.params.id
             }
-        }).then(async () => {
-            let student = await DB.student.update({ Fullname: req.body.Fullname }, {
-                where: {
-                    UserId: req.params.id
-                }
-            }).then((student) => {
-                res.status(201).send({Message:" student Update successfly"})
-           }).catch((err) =>{
-               res.status(400).send({Message : "Bad request"})
-           })
+        }).then( () => {
+            res.status(201).send({Message:" questions Update successfly"})
        }).catch((err) =>{
            res.status(400).send({Message : "Bad request"})
        })
     },
     Delete: async (req, res) => {
-           let student = await DB.student.destroy({ where: {UserId:req.params.id} })
-           .then((student) => {
+           let Questioners = await DB.Questioners.destroy({ where: {id:req.params.id} })
+           .then((Questioners) => {
                 res.status(204).send({Message:"delete succefly"})
            }).catch((err) =>{
                res.status(400).send({Message : err})

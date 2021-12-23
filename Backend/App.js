@@ -9,6 +9,7 @@ const FormateurRouter = require('./Router/Formateurs')
 const StudentRouter = require('./Router/Student')
 const SubjectRouter = require('./Router/Subject')
 const QuestionRouter = require('./Router/Question')
+const QuizRouter = require('./Router/Quiz')
 
 
 /// OUR ROUTERS 
@@ -17,6 +18,7 @@ app.use('/api/formateur', FormateurRouter)
 app.use('/api/student', StudentRouter)
 app.use('/api/subject', SubjectRouter)
 app.use('/api/question', QuestionRouter)
+app.use('/api/quiz', QuizRouter)
 
 
 app.get('/', (req, res) => {
