@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   AllReponse.init({
-    reponse: DataTypes.STRING
+    reponse: DataTypes.STRING,
+    status: DataTypes.BOOLEAN,
+    QuestionId : DataTypes.INTEGER,
+
   }, {
     sequelize,
     modelName: 'AllReponse',

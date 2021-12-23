@@ -14,7 +14,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Questioners.init({
-    name: DataTypes.STRING
+    QuestionName: DataTypes.STRING,
+    Point: DataTypes.INTEGER,
+    SubjectId: DataTypes.STRING
+
   }, {
     sequelize,
     modelName: 'Questioners',
