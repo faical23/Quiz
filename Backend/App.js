@@ -7,12 +7,14 @@ app.use(express.json())
 const UserRouter = require('./Router/User')
 const FormateurRouter = require('./Router/Formateurs')
 const StudentRouter = require('./Router/Student')
+const SubjectRouter = require('./Router/Subject')
 
 
 /// OUR ROUTERS 
 app.use('/api/user', UserRouter)
 app.use('/api/formateur', FormateurRouter)
 app.use('/api/student', StudentRouter)
+app.use('/api/subject', SubjectRouter)
 
 
 app.get('/', (req, res) => {
