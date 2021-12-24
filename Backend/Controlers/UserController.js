@@ -57,7 +57,7 @@ module.exports={
                         const Token = CreateToken(Student.id)
                          res.status(201).send({"User":Student,Token:Token})
                     }).catch((err) =>{
-                        res.status(404).send({Message : "Bad request"})
+                        res.status(400).send({Message : "Bad request"})
                     })
 
                 }

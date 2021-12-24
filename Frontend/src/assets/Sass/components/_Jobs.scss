@@ -1,0 +1,150 @@
+.Jobs{
+    h1{
+        padding: 3px 0px;
+        &:hover{
+            color: $black !important;
+        }
+    }
+    p{
+        padding: 3px 0px;
+        font-family: 'poping-Light';
+        line-height:20px;
+
+    }
+    span{
+        cursor: pointer;
+        font-family: 'poping-Semibold';
+        &:hover{
+            color: $Secondary-100;
+            border-bottom: 1px solid $Secondary-100;
+        }
+
+    }
+    .TitleJobXeHave{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .JobsOptions{
+        display: flex;
+        align-items: center;
+        padding: 10px 0px;
+
+        .Postuler{
+            width: 90%;
+            padding: 10px 0px;
+            border-radius: 5px;
+            font-weight: bold;
+            &:hover{
+                background-color: #e2e2e2 !important;
+            }
+        }
+        .dropdown{
+            width: 10%;
+            text-align: right;
+            .dropdown-toggle::after {
+                display: none !important;
+            }
+            .dropdown-toggle{
+                background-color: #efefef !important;
+                border: none !important;
+                h1{
+                    line-height:13px;
+                }
+                &:hover{
+                    background-color: #e2e2e2 !important;
+                    h1{
+                        color:black;
+                    }
+                }
+            }
+        }
+    }
+}
+.JobsFilter{
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    .OptionJobsTitre{
+        border-radius:5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 20px 0px ;
+        cursor: pointer;
+        background-color:#ececec;
+        h6{
+            font-size:17px;
+        }
+    }
+    .TypeJobs{
+        border-radius:5px;
+        .OptionJobs__single{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            span{
+                font-family: 'poping-Semibold';
+            }
+            input{
+                cursor: pointer;
+            }
+        }
+    }
+    .PriceJobs{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input{
+            border-radius:5px;
+            border: 1px solid rgb(207, 207, 207);
+            width: 50% !important;
+            padding:6px 10px;
+            background-color:#f0f0f0;
+        }
+        h6{
+            width: 30%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
+.PopupNewJobs{
+    .dropdown-menu.show {
+        width: 100% !important;
+        height: 200px !important;
+        overflow-y: scroll;
+    }
+    .PopupCreatePost__ImgVideoBtn{
+        margin-top:40px;
+        justify-content: end;
+    }
+}
+.Candidature{
+    top: 20%;
+    transform: translate(27%, 10%);
+    .dropdown-menu.show {
+        width: 100% !important;
+        height: 200px !important;
+        overflow-y: scroll;
+    }
+    .PopupCreatePost__ImgVideoBtn{
+        margin-top:40px;
+        justify-content: end;
+    }
+    .ClicktoAddCv{
+        text-align:center;
+        border-radius:5px;
+        padding: 1px 0px;
+        background-color: $Secondary-300;
+        color: white;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px ;
+        &:hover{
+            background-color: $Secondary-400;
+        }
+    }
+}

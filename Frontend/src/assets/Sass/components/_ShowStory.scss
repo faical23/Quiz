@@ -1,0 +1,20 @@
+.ShowStory{
+    width: 40%;
+    z-index: 10000;
+    object-fit: cover;
+    margin: 20px auto;
+    img{
+        width:100%;
+        object-fit:cover;
+        height:90vh;   
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+
+}
+.BlackBackground{
+    width: 100%;
+    background: #000000c0;
+    position: fixed;
+    z-index: 5000000;
+}

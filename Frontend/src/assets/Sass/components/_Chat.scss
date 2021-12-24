@@ -1,0 +1,237 @@
+.Chat{
+    width: 95%;
+    margin: 30px auto;
+
+    .Chat__Header{
+        position: relative;
+        z-index: 600;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius:5px;
+        padding:15px;
+        background-color:white;
+        box-shadow: 0px 0px 11px -6px black;
+        .ConnectWith{
+            display: flex;
+            align-items: center;
+            .AvatarUser{
+                position: relative;
+                img{
+                    width:50px;
+                    height:50px;
+                    border-radius:100%;
+                    border: 3px solid $Secondary-500;
+                }
+                h1{
+                    position: absolute;
+                    bottom: -15px;
+                    right: 0;
+                    color: green;
+                    font-size:80px;                
+                }
+            }
+
+            .Name{
+                position: relative;
+                left:10px;
+                h5{
+                    &:hover{
+                        border-bottom: 1px solid $Secondary-400;
+                        color: $Secondary-400;
+                        cursor: pointer;
+                    }
+                }
+                p {
+                    padding-top: 5px;
+                }
+            }
+        }
+        .dropdown{
+            button{
+                border: none !important;
+                vertical-align:baseline ;
+                background: none !important;
+                h1{
+                    padding: 0px;
+                    margin: 0px;
+                    line-height:0px;
+                    color:$primary-500;
+                    &:hover{
+                        color: $Secondary-400;
+                    }
+                }
+            }
+            .dropdown-toggle::after {
+                display: none !important;
+            }
+            .dropdown-menu.show {
+                width: 250px !important;
+                .dropdown-item{
+                    display: flex;
+                    align-items: center;
+                    padding: 7px 20px;
+                    svg{
+                        margin-right: 10px;
+                    }
+                    &:hover{
+                        background-color:$Secondary-200 ;
+                    }
+                
+                }
+            }
+        }
+    }
+    .Chat__Message{
+
+        background-color:white;
+        .ConnectWith{
+            text-align:center;
+            img{
+                width:60px;
+                height:60px;
+                border-radius: 100%;
+            }
+            h6,p,span{
+                padding:5px 0px;
+            }
+            .Chat__StartDate{
+                font-size:13px;
+                padding:20px 0px; 
+            }
+        }
+    }
+    .Messages{
+        padding: 30px 10px;
+        height:670px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        border-left: 1px solid $Secondary-500;
+        border-right: 1px solid $Secondary-500;
+        .SingleMessage{
+            width:70%;
+            display: flex;
+            align-items: end;
+            margin: 10px 0px;
+            position: relative;
+            .TextTime{
+                width: 40%;
+            }
+            img{
+                width:40px;
+                height:40px;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+            p{
+                background-color:#e4e6eb;
+                border-radius:20px;
+                line-height:25px;
+                padding:5px 20px;
+            }
+            svg{
+                     margin-right: 10px;
+                    /* border: 1px solid black; */
+                    border-radius: 100%;
+                    padding: 5px;
+                    width: 35px;
+                    height: 35px;
+                    background: white;
+                    cursor: pointer;
+                    &:hover{
+                        background-color:rgb(245, 245, 245);
+                    }
+            }
+            // .dropdown{
+            //     display: none;
+            //     button{
+            //         border: none !important;
+            //         vertical-align:baseline ;
+            //         background: none !important;
+            //         h1{
+            //             padding: 0px;
+            //             margin: 0px;
+            //             line-height:0px;
+            //             color:$primary-500;
+            //             &:hover{
+            //                 color: $Secondary-400;
+            //             }
+            //         }
+
+            //     }
+            //     .dropdown-toggle::after {
+            //         display: none !important;
+            //     }
+            //     .dropdown-menu.show {
+            //         width: 150px !important;
+            //         .dropdown-item{
+            //             display: flex;
+            //             align-items: center;
+            //             padding: 7px 20px;
+            //             svg{
+            //                 margin-right: 10px;
+            //             }
+            //             &:hover{
+            //                 background-color:$Secondary-200 ;
+            //             }
+                    
+            //         }
+            //     }
+            // }
+            // &:hover{
+            //     .dropdown{
+            //         display: block;
+            //         // position: relative;
+            //         // left: 100px;
+            //     }
+            // }
+        }
+        .UsendThisMsg{
+            justify-content:right;
+            margin-left: auto;
+            img{
+                width:15px;
+                height:15px;
+                margin-right: 0px;
+                margin-left: 10px;
+            }
+            p{
+                background-color:$Secondary-300;
+                color: white;
+            }
+        }
+        .MessageImg,video {
+            width:300px !important;
+            height:200px !important;
+            border-radius: 5px !important;
+        }
+
+    }
+    .Chat_InputMessage{
+        width:100%;
+        background-color:white !important;
+        box-shadow: 0px 0px 11px -7px black;
+        border-radius: 5px !important;
+        padding: 10px 5px;
+        display: flex;
+        align-items: center;
+        svg{
+            fill: $Secondary-300;
+            width: 5%;
+            cursor: pointer;
+            &:hover{
+                fill: $Secondary-400;
+            }
+        }
+        input{
+            width: 100% !important;
+            border-radius:40px;
+            background-color:$Primary-100;
+            padding: 8px 10px;
+        }
+    }
+    .react-input-emoji--button--icon{
+        width: 100% !important;
+    }
+}

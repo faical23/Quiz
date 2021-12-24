@@ -1,7 +1,10 @@
 const express = require('express')
+var cors = require('cors')
+
 const app = express()
 const router = require('./Router/User')
 app.use(express.json())
+app.use(cors())
 
 /// IMPORT OUR ROUTER 
 const UserRouter = require('./Router/User')

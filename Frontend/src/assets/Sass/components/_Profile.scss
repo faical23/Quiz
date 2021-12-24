@@ -1,0 +1,235 @@
+.Profile{
+
+    .Profil__cover{
+        background-image:url(../Img/ProfileBackground.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+        padding: 30px;
+        height:300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .ActiveStoryProfile{
+            border: 5px solid $Secondary-400;
+        }
+        .AvatarAndNewImg{
+            position: absolute;
+            bottom: -70px;
+            text-align: center;
+            // display:flex;
+            // align-items: center;
+            img{
+                width:100px;
+                height: 100px;
+                border-radius: 100%;
+                cursor: pointer;
+            }
+            p{
+                padding: 5px 0px;
+            }
+        }
+
+
+    }
+    .BtnUpdate{
+        text-align: -webkit-right;
+        margin: 15px 0px;
+        button{
+            padding: 5px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        .UpdateProfile{            
+            svg{
+                margin-right: 10px;
+            }
+            &:hover{
+                background-color:#dddddd;
+            }
+        }
+        .Folow{
+            background-color:$Secondary-300 ;
+            color: white;
+            &:hover{
+                background-color:$Secondary-400 ;
+            }
+        }
+        .UnFolow{
+            border: 1px solid $Secondary-100;
+            background-Color:white;
+            color: $Secondary-100;
+            &:hover{
+                background-color:$Secondary-200;
+            }
+        }
+    }
+    .Profile__Statistique{
+        padding: 30px 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .Statistique__single{
+            border-radius: 10px;
+            width: 25%;
+            padding: 20px 10px;
+            background-color:$Secondary-500;
+            box-shadow: 0px 0px 11px -8px black;
+            cursor: pointer;
+            h4{
+                padding-bottom: 10px;
+                color: white;
+            }
+            p{
+                font-size: 20px;
+                color: white;
+            }
+        }
+    }
+    .Location,.Born,.Join,.Description,.Website{
+        display: flex;
+        align-items: center;
+        padding: 20px 5px 5px 5px;
+        svg{
+            margin-right: 5px;
+        }
+    }
+    .Born,.Join,.Description,.Website{
+        padding: 5px;
+    }
+    .SwitchPub{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+        h5{
+            cursor: pointer;
+            padding: 10px 0px;
+            width: 100%;
+            text-align: center;
+            color: rgb(177, 177, 177);
+            border-bottom: 4px solid rgb(177, 177, 177);
+
+        }
+        .Active{
+            color:  $Secondary-300;
+            border-bottom: 4px solid $Secondary-300;
+        }
+    }
+    .blicationImg{
+        margin: 40px 0px;
+        .PostProfile__Single{
+            position: relative;
+            margin: 20px 0px;
+            width: 400px;
+            height:300px;
+            img{
+                z-index: 10;
+                position: relative;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all .3s ease-out;
+                width:100%;
+                height:100%;
+                box-shadow: 0px 0px 11px -5px black;
+    
+                &:hover {
+                    -webkit-filter: brightness(80%);
+                }
+            }
+            .PostStatistique{
+                display:none !important;
+                z-index: 20;
+                display: flex;
+                align-items: center;
+                position:absolute;
+                top:50%;
+                left:30%;
+                color:white;
+                .Like,.Comment{
+                    padding-right: 30px;
+                    display: flex;
+                    align-items: center;
+                    span{
+                        padding-right: 5px;
+                        font-weight: 600;
+                        font-size:20px;
+                    }
+                    svg{
+                        fill: white;
+                        width: 30px;
+                        height:30px
+                    }
+                }
+            }
+            &:hover{
+                .PostStatistique{
+                    display: flex !important;
+                }
+            }
+        }
+
+    }    
+
+
+}
+.PopupUpdateProfile{
+    .Profil__cover{
+        background-image:url(../Img/ProfileBackground.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        border-radius:10px;
+        padding:30px;
+        height:200px;
+        position: relative;
+        .AvatarAndNewImg{
+            position: absolute;
+            display: flex;
+            bottom: -30px;
+            img{
+                width:70px;
+                height:70px;
+                border-radius:100%
+            }
+            svg{
+                margin-left: 10px;
+                cursor: pointer;
+                &:hover{
+                    fill: $Secondary-300;
+                }
+            }
+        }
+
+        button{
+            position: absolute;
+            right:20px;
+            bottom: 17px;
+            padding: 5px 20px;
+            border-radius: 5px;
+            display: flex;
+            align-items:center;
+            svg{
+                margin-right: 5px;
+            }
+            &:hover{
+                background-color:#dddddd;
+            }
+
+    }
+}
+    .ZoneInput{
+        margin: 30px 0px;
+    }
+    .PopupCreatePost__ImgVideoBtn{
+        justify-content: end;
+    }
+    }

@@ -1,0 +1,59 @@
+.Météo{
+    .Météo__Search{
+        background-color: #f7fbff;
+        margin: 20px 50px;
+        border-radius: 50px;
+        padding: 0px 10px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 0px 11px -8px black;
+        svg{
+            width: 10%;
+            fill: #b9b9b9;
+        }
+        input{
+            width: 90%;
+            padding: 12px 0px;
+            background-color:transparent;
+        }
+    }
+    .InformationsMeteo{
+        padding: 0px 50px;
+        padding-bottom:40px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img{
+            width: 40%;
+            position: relative;
+            animation: ImgWeather 3s infinite;
+        }
+        @keyframes ImgWeather {
+            0% {left: 0; }
+            10% {left: 10px; }
+            20% {left: 20px; }
+            30% {left: 30px; }
+            40% {left: 40px; }
+            50% {left: 50px; }
+            60% {left: 40px; }
+            70% {left: 30px; }
+            80% {left: 20px; }
+            90% {left: 10px; }
+            100% {left: 0; }
+
+          }
+        h1{
+            padding: 10px 0px;
+        }
+        p{
+            font-family: 'poping-Medium';
+            padding:10px 0px;
+        }
+        .Localisation{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

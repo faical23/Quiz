@@ -1,0 +1,136 @@
+.SettingPage{
+    padding: 20px;
+    h1,h4{
+        font-family: 'poping-Bold';
+        margin: 0px !important;
+    }
+    h4{
+        position: relative;
+        top: 12px;
+        text-align: center;
+    }
+    .Options__Item{
+        width: 100%;
+        padding:12px 20px;
+        border-radius:5px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        // background-color:$Secondary-200;
+        margin: 20px 0px;
+        // border: 1px solid $Secondary-100;
+
+        h5{
+            font-size:16px;
+            font-family: 'poping-Semibold';
+            color:$Thirdary-400;
+            margin:0px !important;
+            margin-left: 18px !important;
+            font-weight: 100;
+        }
+        img{
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+        }
+    }
+    .ActiveOption{
+        background-color:$Secondary-200;
+        border: none;
+    }
+    .General,.Sécurité,.Langue,.Paiment{
+        .InputFaild{
+            padding: 10px 0px;
+            h5{
+                font-size:15px;
+                padding-bottom: 10px;
+            }
+            input,textarea,select{
+                display: block;
+                width:100%;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 1px solid $Secondary-300;
+                background-color:transparent;
+                // border: 1px solid #2a0e58;
+                background-color: transparent;
+                BOX-SHADOW: 0px 0px 10px -4px #2a0e58;
+            }
+            textarea{
+                height:150px;
+            }
+        }
+        
+    }
+    .BtnUpdate{
+        padding: 10px 0px;
+        text-align: end;
+        button{
+            padding: 10px 25px;
+            border-radius: 5px;
+            background-color:$Secondary-300;
+            color: white;
+            &:hover{
+                background-color:$Secondary-400;
+            }
+        }
+    }
+    .NotificationSetting,.Publication{
+        .InputFaild{
+            padding: 10px 0px;
+            display: block;
+        }
+        h5{
+            font-size:15px;
+            padding-bottom: 10px;
+        }
+        span{
+            display: block;
+            line-height:20px;
+        }
+        div {
+            display: inline-block;
+            padding-top: 10px;
+          }
+          
+          label {
+            background: linear-gradient(-180deg, #FFFFFF 0%, #EAF1F5 97%);
+            box-shadow: 0px 1px 5px 0px rgba(93,145,171,0.6);
+            border-radius: 3px;
+            padding: 10px 15px;
+            cursor: pointer;
+          }
+          
+          input[type=radio] {
+            display:none;
+            
+            &:checked + label {
+              background: $Secondary-100;
+              box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, 0.6);
+              color: #fff;
+              cursor: default;
+            }
+          }
+    }    
+}
+.SettingPageElement{
+    padding: 10px 20;
+    margin-top: 50px;
+}
+.SettingSwitch{
+    background-color: white !important;
+    box-shadow: 0px 0px 10px -7px black;
+    width: 40%;
+    border-radius: 2px;
+    height:500px;
+
+}
+
+.SettingZone{
+    box-shadow: 0px 0px 10px -7px black;
+    background-color: white !important;
+    padding: 10px 30px;
+    border-radius: 2px;
+    width: 50%;
+    margin: 0px auto;
+}

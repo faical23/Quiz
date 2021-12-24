@@ -1,0 +1,8 @@
+.SavedPost .Post__Single {
+  background-color: red !important;
+}
+
+.SavedPost .Post__Single .SavedImgPost img {
+  width: 100px;
+  height: 100px;
+}

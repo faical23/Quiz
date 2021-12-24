@@ -1,0 +1,99 @@
+.Donation{
+    .SelectDonation{
+        padding: 20px;
+        .DonationCard{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0px;
+            h3{
+                width:20%;
+                text-align: center;
+                // border: 1px solid black;
+                border-radius: 5px;
+                padding:10px 0px;
+                cursor: pointer;
+                color:white;
+                background-color:$Secondary-400;
+                margin: 10px 0px;
+            }
+            .ActiveDonation{
+                background-color:$Secondary-300
+            }
+        }
+    }
+    .DonationAnother{
+        padding: 0px 20px;
+        margin-bottom: 30px;
+        .EnterAmount{
+            margin: 10px 0px;
+            display: flex;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0px 10px;
+            h6{
+                margin: 0px !important;
+                font-size:20px;
+            }
+            input{
+                width:90%;
+                padding:12px 10px;
+            }
+            .RemoveAmountInput{
+                &:hover{
+                    color: $Secondary-400;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .WhyDonation{
+        padding: 0px 20px;
+        margin-bottom: 20px;
+        h5{
+            padding: 10px 0px;
+        }
+        p{
+            line-height: 25px;
+        }
+
+    }
+    .ModePaiment{
+        padding: 0px 20px;
+        .PaimentImg{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            img{
+                margin: 30px 0px;
+                width: 15%;
+                display: block;
+                object-fit: cover;
+                border-radius:100%;
+                cursor: pointer;
+                transition: all .3s ease-out;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .PaimentImgCard{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                margin: 10px 0px;
+                width: 20%;
+                display: block;
+                object-fit: cover;
+                cursor: pointer;
+                transition: all .3s ease-out;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+    }
+}

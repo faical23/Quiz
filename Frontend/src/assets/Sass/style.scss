@@ -1,0 +1,78 @@
+// 1 - Utils
+@import "utils/variables";
+@import "utils/mixins";
+
+// 2 - Vendors;
+
+// 3 - Base;
+@import "base/reset";
+@import "base/typography";
+
+// 4 - layout
+
+@import "layout/navbar";
+@import "layout/Footer";
+// 5 - componenets;
+
+@import "components/Menu";
+@import "components/Sponsore";
+@import "components/Video";
+@import "components/MarketPlace";
+@import "components/SavedPost";
+@import "components/Météo";
+@import "components/Jobs";
+@import "components/Profile";
+@import "components/Chat";
+@import "components/Donation";
+@import "components/SettingPage";
+@import "components/ShowPublicaation";
+@import "components/CreateArticel";
+@import "components/Amis";
+@import "components/CreatePost";
+@import "components/Post";
+@import "components/Body__LeftContent";
+@import "components/ZoneStory";
+@import "components/ResultSearch";
+@import "components/Links";
+@import "components/LatestPost";
+@import "components/Suggest";
+@import "components/SettingPopup";
+@import "components/PopupNotificationDesktop";
+@import "components/ShowStory";
+
+// 6 - Pages
+@import "pages/home";
+@import "pages/Connexion";
+
+
+
+.ant-card-body{
+    .ant-row{
+        display: grid;
+    }
+    .ant-col-10{
+        max-width: 100%;
+    }
+    .ant-col-14{
+        display: none !important;
+    }
+    .upload-container{
+        width: 100% !important;
+        margin: 0 !important
+    }
+    .ant-row:nth-child(2) {
+        display: none !important
+    }
+    .ant-divider-horizontal{
+        display: none !important
+    }
+    .ant-col-md-6{
+        display: flex !important;
+    }
+}
+.SideBarePlace{
+    width:300px;
+}
+.MySideBar{
+    background:#b7ddff !important;
+}

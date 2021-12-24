@@ -1,0 +1,104 @@
+.MarketPlace{
+    .MarketPlace__Single{
+        cursor: pointer;
+        margin:20px 0px ;
+        img{
+            border-radius:10px ;
+            height:250px;
+            box-shadow: 0px 0px 11px -6px black;
+        }
+        .MarketPlace__Single_Price{
+            color: $Thirdary-200 ;
+            font-family: 'poping-Semibold';
+            font-size:20px;
+            padding:7px 0px;
+            margin: 0px;
+        }
+        .MarketPlace__Single_Name{
+            color: $Thirdary-200 ;
+            font-size: 15px;
+            line-height:20px;   
+            padding-bottom: 10px;         
+        }
+        .MarketPlace_Single__Localisation{
+            font-size:14px;
+            color:$primary-500;
+            text-align: end;
+            float:right;
+        }
+    }
+}
+.ArticlesFliter{
+    top:0px;
+    width:400px;
+    left:0;
+    height:100vh;
+    overflow:scroll;
+    padding:20px 30px;
+    h1{
+        font-size:25px;
+    }
+    button{
+        width:100%;
+        padding: 8px 0px;
+        border-radius: 5px;
+        margin-top: 20px;
+        background-color:$Secondary-100;
+        color: $white;
+        &:hover {
+            background-color:$Secondary-300;
+        }
+    }
+    .ArticlesFliter__Search{
+        margin: 10px 0px;
+        border-radius:40px;
+        padding:4px 10px;
+        width:100%;
+        background-color:$Primary-100 ;
+        display: flex;
+        input{
+            width:100%;
+            height:100%;
+            background:transparent;
+            font-size: 19px !important;
+            color:$Thirdary-100;
+        }
+        ::placeholder{
+            font-size: 17px;
+            font-family: 'poping-Light';
+            color:$primary-500;
+        }
+        svg{
+            height:30px;
+            width:20%;
+            fill: $primary-500;
+        }
+    }
+    h5{
+        padding: 15px 0px 10px 0px;
+        margin: 10px 0px;
+        border-top: 1px solid #dbdbdb;
+    }
+    .Catégories__Filter{
+        padding: 10px 5px;
+        border-radius:5px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span{
+            font-family: 'poping-Medium';
+            padding: 0px 10px;
+        }
+        i{
+            background-color:#F7FBFF;
+            color:$Thirdary-200 ;
+            border-radius: 100%;
+            padding:12px;
+            font-size: 16px;
+            box-shadow: 0px 0px 11px -8px black;
+        }
+        &:hover{
+            background-color:#dcebfa
+        }
+    }
+}

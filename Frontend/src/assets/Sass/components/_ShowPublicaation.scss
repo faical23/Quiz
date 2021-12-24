@@ -1,0 +1,284 @@
+.ShowPublicaation{
+    display: flex;
+    position:fixed;
+    width: 70%;
+    z-index:10000;
+    height:800px;
+    left:15%;
+    top:5%;
+    background-color: white;
+    border-radius:10px;
+    box-shadow:0px 0px 11px -6px black;
+    overflow:hidden;
+    .ShowPublicaation__Img{
+        position: relative;
+        width:60%;
+        Img{
+            width:100% !important;
+            height: 800px;
+            object-fit: cover;
+        }
+    }
+    .ShowPublicaation__Content{
+        position: relative;
+        width: 100%;
+        .Post__CreatedBy{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            border-bottom: 1px solid $primary-700;
+            .AvatarAndName{
+                display: flex;
+                align-items: center;
+                img{
+                    width:60px;
+                    height:60px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                }
+                .HaveStory{
+                    border: 3px solid $Secondary-400;
+                }
+                h6,p{
+                    cursor: pointer;
+                    padding-left: 20px;
+                    &:hover{
+                        color: $Secondary-400;
+                    }
+                }
+                p{
+                    font-size:14px;
+                    position: relative;
+                    top:5px;
+                }
+            }
+            .Options{
+                h3{
+                    cursor: pointer;
+                    &:hover{
+                        color: $Secondary-400;
+                    }
+                }
+            }
+    
+        }
+        .Post__Description{
+            padding: 10px 20px;
+            p{
+                color: $Thirdary-200;
+                width: 90%;
+                line-height:20px;
+                padding-left: 10px;
+                font-size:15px;
+            }
+    
+        }
+        .Post__Icons{
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            svg{
+                width:30px;
+                height:30px;
+                cursor: pointer;
+                fill: $Thirdary-200;
+                &:hover{
+                    fill: $Secondary-400;
+                }
+            }
+            .LeftIcons{
+                display: flex;
+                svg,.LikeHearet{
+                    margin-right:20px ;
+                }
+            }
+            .Active{
+                fill: red;;
+            }
+        }
+        .Post__LikesNumber{
+            padding: 4px 30px;
+        }
+        .Post__AficherLesComment{
+            h6{
+                padding: 4px 30px;
+                color: $primary-500;
+                cursor: pointer;
+                font-size: 14px;
+                padding-bottom: 10px;
+                &:hover{
+                    color: $Secondary-400;
+                }
+            }
+        }
+        .Post__Date{
+            padding: 10px 30px;
+            p{
+                font-size: 13px;
+                color: $primary-500;
+            }   
+        }
+        .Post__AddComment{
+            margin-top: 5px;
+            border: 1px solid $Secondary-200 ;
+            padding: 10px 30px;
+            display: flex;
+            position:absolute;
+            width: 100%;
+            bottom: 0;
+            z-index: 100;
+            background-color:white;
+            display:flex;
+            align-items:center;
+            input{
+                width:90%;
+                margin-left:10px;
+            }
+            svg{
+                width: 10%;
+                width:30px;
+                height:30px;
+                cursor: pointer;
+            }
+    
+        }
+        .Comment__Single{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 5px 30px;
+            margin:15px 0px;
+            .Comment__Single__Information{
+                width:90%;
+                display: flex;
+                align-items: flex-start;
+                img{
+                    width: 43px;
+                    height:43px;
+                    border-radius: 100%;
+                    border:2px solid $Secondary-200;
+                }
+                .NameAndComment{
+                    background-color:$Primary-100;
+                    border-radius: 5px;
+                    padding:10px; 
+                    width:100%;
+                    position: relative;
+                    left:10px;
+                    h6{
+                        padding-bottom: 5px;
+                        margin: 0px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $Secondary-400;
+                        }
+                    }
+                    p{
+                        margin: 0px;
+                        line-height:20px;
+                    }
+                }
+            }
+            svg{
+                width: 10%;
+                position: relative;
+                left: 20px;
+                cursor: pointer;
+            }
+        }
+        .Cemment_AND_Description{
+            height:650px;
+            overflow-y:scroll;
+            padding: 30px 0px;
+        }
+    }
+    
+
+    i {
+        cursor:pointer;
+        background:#fff;
+        border-radius:50%;
+        display:inline-block;
+        color:#aaa;
+        transition:.2s;
+        font-size: 25px;
+      }
+      
+      i:hover {
+        color:#666;
+      }
+      
+      i:before {
+        font-family:fontawesome;
+        content:'\f004';
+        font-style:normal;
+      }
+      .NotActiveLike{
+        color: red;
+        position: absolute;
+        bottom:-5px;
+        left: -70px;
+        opacity: 0;
+      }
+      .ActiveLike{
+        @extend .NotActiveLike;
+        animation: mymove .5s
+      }
+      @keyframes mymove {
+        10% {left: -30px;opacity: 0}
+        50% {left: &0px;opacity: 0.4}
+        100% {left: 50px;opacity: 1}
+      }
+      
+      span {
+        position: absolute;
+        // bottom:70px;
+        // left:0;
+        // right:0;
+        // visibility: hidden;
+        transition:.6s;
+        z-index:-2;
+        font-size:10px;
+        font-weight:400;
+        color: green;
+      }
+      
+      i.press {
+        animation: size .4s;
+        color:#e23b3b;
+      }
+      
+      span.press {
+        bottom:120px;
+        font-size:14px;
+        visibility:visible;
+        animation: fade 1s;
+      }
+      
+      @keyframes fade {
+        0% {color:transparent};
+        50% {color:#e23b3b};
+        100% {color:transparent};
+      }
+      .TextAndIcons{
+        background-color:#f3f3f3cf;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-left: auto;
+        padding: 10px ;
+        border-radius: 6px;
+        p{
+            font-weight: 400;
+            color: $Thirdary-200;
+        }
+        svg{
+            fill: $Secondary-400;
+        }
+}
+      
+}
