@@ -1,9 +1,12 @@
 const DB = require('../models');
 const {CryptPassword} = require('../Midlleware/Crypto')
+const DbQuery = require('../config/config')
+// SELECT * FROM `formateurs` inner join  `users` ON formateurs.UserId = users.id
 
 module.exports={
     GetAll: async (req, res) => {
-        let Formateurs = await DB.formateurs.findAll()
+        DbQuery.sequelize.query(`SELECT  formateurs.id,formateurs.Fullname, users.Email,users.createdAt  FROM formateurs inner join  users ON formateurs.UserId = users.id`,
+        {type: DbQuery.sequelize.QueryTypes.SELECT})
         .then((Formateurs) => {
              res.status(201).send({Formateurs})
         }).catch((err) =>{
@@ -57,9 +60,9 @@ module.exports={
        })
     },
     Delete: async (req, res) => {
-           let Formateur = await DB.formateurs.destroy({ where: {UserId:req.params.id} })
+           let Formateur = await DB.formateurs.destroy({ where: {id:req.params.id} })
            .then((Formateur) => {
-                res.status(204).send({Message:"delete succefly"})
+                res.status(200).send({Message:"delete succefly"})
            }).catch((err) =>{
                res.status(400).send({Message : err})
            })

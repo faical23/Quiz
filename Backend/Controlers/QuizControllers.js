@@ -23,7 +23,7 @@ module.exports={
                                 ON quizzes.id = quizquestions.QuizIdId 
                                 AND quizquestions.QuestionId = questioners.id  
                                 AND quizzes.id = ${req.params.id} GROUP BY questioners.QuestionName `, {
-            type: db.sequelize.QueryTypes.SELECT
+                type: db.sequelize.QueryTypes.SELECT
         }).then( (Quiz) => {
             if(Quiz.length === 0){
                 return res.status(StatusCodes.NOT_FOUND).send()
